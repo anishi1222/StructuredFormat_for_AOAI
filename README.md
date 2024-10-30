@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Micronaut 4.6.2 Documentation
 
 - [User Guide](https://docs.micronaut.io/4.6.2/guide/index.html)
@@ -22,3 +23,6 @@
 - [Micronaut AOT documentation](https://micronaut-projects.github.io/micronaut-aot/latest/guide/)
 
 
+=======
+# Sample code of structured outputs (Azure OpenAI Service)
+>>>>>>> c9e2c5c9057f4f815c603897a2281ed2600a43d0
