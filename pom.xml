@@ -14,8 +14,8 @@
     </parent>
     <properties>
         <packaging>jar</packaging>
-        <jdk.version>21</jdk.version>
-        <release.version>21</release.version>
+        <jdk.version>25</jdk.version>
+        <release.version>25</release.version>
         <micronaut.version>5.0.2</micronaut.version>
         <micronaut.aot.enabled>false</micronaut.aot.enabled>
         <micronaut.aot.packageName>io.logicojp.micronaut.aot.generated</micronaut.aot.packageName>
@@ -95,6 +95,18 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>micronaut-enforce</id>
+                        <configuration>
+                            <rules combine.self="override">
+                                <requireJavaVersion>
+                                    <version>25</version>
+                                </requireJavaVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
