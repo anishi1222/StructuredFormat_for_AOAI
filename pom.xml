@@ -10,17 +10,20 @@
     <parent>
         <groupId>io.micronaut.platform</groupId>
         <artifactId>micronaut-parent</artifactId>
-        <version>5.0.3</version>
+        <version>5.0.4</version>
     </parent>
     <properties>
         <packaging>jar</packaging>
         <jdk.version>25</jdk.version>
         <release.version>25</release.version>
-        <micronaut.version>5.0.3</micronaut.version>
+        <micronaut.version>5.0.4</micronaut.version>
         <micronaut.aot.enabled>false</micronaut.aot.enabled>
         <micronaut.aot.packageName>io.logicojp.micronaut.aot.generated</micronaut.aot.packageName>
         <micronaut.runtime>netty</micronaut.runtime>
         <exec.mainClass>io.logicojp.micronaut.Application</exec.mainClass>
+        <jackson.version>2.22.1</jackson.version>
+        <azure.openai.version>1.0.0-beta.16</azure.openai.version>
+        <azure.identity.version>1.18.4</azure.identity.version>
     </properties>
 
     <repositories>
@@ -34,22 +37,22 @@
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-jsonSchema</artifactId>
-            <version>2.21.4</version>
+            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.21.4</version>
+            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-ai-openai</artifactId>
-            <version>1.0.0-beta.16</version>
+            <version>${azure.openai.version}</version>
         </dependency>
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-identity</artifactId>
-            <version>1.18.4</version>
+            <version>${azure.identity.version></version>
             <scope>compile</scope>
         </dependency>
         <dependency>
