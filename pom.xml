@@ -10,17 +10,21 @@
     <parent>
         <groupId>io.micronaut.platform</groupId>
         <artifactId>micronaut-parent</artifactId>
-        <version>5.0.3</version>
+        <version>5.1.0</version>
     </parent>
     <properties>
         <packaging>jar</packaging>
         <jdk.version>25</jdk.version>
         <release.version>25</release.version>
-        <micronaut.version>5.0.3</micronaut.version>
+        <micronaut.version>5.1.0</micronaut.version>
         <micronaut.aot.enabled>false</micronaut.aot.enabled>
         <micronaut.aot.packageName>io.logicojp.micronaut.aot.generated</micronaut.aot.packageName>
         <micronaut.runtime>netty</micronaut.runtime>
         <exec.mainClass>io.logicojp.micronaut.Application</exec.mainClass>
+        <jackson2.version>2.22.1</jackson2.version>
+        <logback.version>1.5.35</logback.version>
+        <azure.openai.version>1.0.0-beta.16</azure.openai.version>
+        <azure.identity.version>1.18.4</azure.identity.version>
     </properties>
 
     <repositories>
@@ -34,17 +38,22 @@
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-jsonSchema</artifactId>
-            <version>2.20.2</version>
+            <version>${jackson2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson2.version}</version>
         </dependency>
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-ai-openai</artifactId>
-            <version>1.0.0-beta.16</version>
+            <version>${azure.openai.version}</version>
         </dependency>
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-identity</artifactId>
-            <version>1.18.4</version>
+            <version>${azure.identity.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -73,6 +82,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <scope>test</scope>
@@ -88,6 +102,7 @@
             <plugin>
                 <groupId>io.micronaut.maven</groupId>
                 <artifactId>micronaut-maven-plugin</artifactId>
+                <extensions>false</extensions>
                 <configuration>
                     <configFile>aot-${packaging}.properties</configFile>
                 </configuration>
