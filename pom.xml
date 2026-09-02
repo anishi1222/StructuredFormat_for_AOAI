@@ -23,7 +23,7 @@
         <jackson2.version>2.22.2</jackson2.version>
         <logback.version>1.6.3</logback.version>
         <azure.openai.version>1.0.0-beta.16</azure.openai.version>
-        <azure.identity.version>1.18.4</azure.identity.version>
+        <azure.identity.version>1.18.5</azure.identity.version>
     </properties>
 
     <repositories>
